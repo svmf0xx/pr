@@ -1,17 +1,15 @@
 #include <iostream>
 using namespace std;
-double my_pow(double x, int power) {
-
-double result = 1;
-while (power > 0) {
-if (power % 2 == 0) {
-power /= 2;
-x *= x;
+double my_pow(double a, int b)
+{
+if (b<0)
+{
+b = -b;
 }
-else {
-power--;
-result *= x;
+int c = a;
+for (int i = 0; i < b; i++)
+{
+c = c * a;
 }
-}
-return result;
+return c;
 }
